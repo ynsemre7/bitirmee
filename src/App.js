@@ -2,15 +2,16 @@ import Sidebar from 'components/Sidebar'
 import BottomBar from 'components/BottomBar'
 import Content from 'components/Content'
 import { BrowserRouter as Router } from "react-router-dom"
+import '+firebase/Firebase'
 
 function App() {
 	return (
 		<Router>
 			<div className="wrapper">
-				<Sidebar/>
-				<Content/>
+				<Sidebar />
+				<Content />
 			</div>
-			<BottomBar/>
+			<BottomBar />
 		</Router>
 	);
 }

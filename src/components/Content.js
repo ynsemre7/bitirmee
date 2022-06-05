@@ -4,6 +4,7 @@ import Navbar from 'components/Navbar'
 import Home from "views/Home"
 import Search from "views/Search"
 import Collection from "views/Collection"
+import SongDetail from 'views/SongDetail';
 
 function Content() {
 	return (
@@ -19,6 +20,9 @@ function Content() {
 					</Route>
 					<Route path="/collection">
 						<Collection />
+					</Route>
+					<Route path="/song-detail/:id">
+						<SongDetail />
 					</Route>
 				</Switch>
 			</div>
