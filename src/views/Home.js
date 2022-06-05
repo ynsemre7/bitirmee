@@ -1,19 +1,15 @@
 import Section from "components/Section";
 
 import db from "../+firebase/Firebase"
-import React, {useEffect,useState} from "react"
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import React, { useEffect, useState } from "react"
+import { collection, getDocs } from 'firebase/firestore/lite';
 function Home() {
 	const [songs, setSongs] = useState([]);
-	
+
 	useEffect(() => {
-		console.log(getCities())
-	
-	  return () => {
-		
-	  }
+		getCities()
 	}, [])
-	
+
 
 	async function getCities() {
 		const citiesCol = collection(db, 'songs');
@@ -22,7 +18,7 @@ function Home() {
 		console.log(cityList)
 		setSongs(cityList)
 		return cityList;
-	  }
+	}
 	return (
 		<div className="grid gap-y-8">
 			<Section

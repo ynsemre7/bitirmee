@@ -35,12 +35,14 @@ function SongItem({ item }) {
 
     const updateFav = () => {
         let arR = []
-        arR = JSON.parse(sessionStorage.getItem("favs"))
+        arR = JSON.parse(sessionStorage.getItem("favs")) || []
         if (arR?.includes(item?.id)) {
+            console.log("çalıştı", item.id)
             arR = arR?.filter(song => song !== item?.id)
 
         } else {
             arR?.push(item?.id)
+            console.log("çalıştı", arR)
         }
         sessionStorage.setItem("favs", JSON.stringify(arR))
         setArr(arR)
